@@ -1,7 +1,7 @@
-const NavListItem = ({ name }) => {
+const NavListItem = ({ nav }) => {
   return (
     <li>
-      <a href="#">{name}</a>
+      <a href={nav.link}>{nav.name}</a>
     </li>
   );
 };

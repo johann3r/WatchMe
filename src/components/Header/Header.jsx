@@ -1,4 +1,5 @@
 import NavListItem from "../NavListItem/NavListItem";
+import navListData from "../../data/navListData";
 
 const Header = () => {
   return (
@@ -6,9 +7,10 @@ const Header = () => {
       <a href="/" className="logo">
         WatchMe
       </a>
-      <ul className="navbar">
-        <NavListItem name="Home" />
-        <NavListItem name="Favoriten" />
+      <ul className="nav">
+        {navListData.map((nav) => (
+          <NavListItem key={nav._id} nav={nav} />
+        ))}
       </ul>
     </header>
   );
